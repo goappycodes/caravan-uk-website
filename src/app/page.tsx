@@ -1,65 +1,125 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import { faqs, services, site } from "@/lib/site";
+import { Hero } from "@/components/Hero";
+import { Services } from "@/components/Services";
+import { Warranty } from "@/components/Warranty";
+import { DampCallout } from "@/components/DampCallout";
+import { Coverage } from "@/components/Coverage";
+import { About } from "@/components/About";
+import { Reviews } from "@/components/Reviews";
+import { Faq } from "@/components/Faq";
+import { BookingCta } from "@/components/BookingCta";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Caravan & Motorhome Servicing Malton, York | Caravan Support",
+  description:
+    "AWS Approved caravan & motorhome servicing, repairs and upgrades in Malton, North Yorkshire. Workshop & fully mobile. Keep your warranty valid — call 01653 513019.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Caravan & Motorhome Servicing in North Yorkshire | Caravan Support",
+    description:
+      "AWS Approved servicing, repairs and upgrades — at our Malton workshop or mobile at your home, storage site or holiday park. Rated 4.9/5 on Google.",
+    url: "/",
+    siteName: site.name,
+    locale: "en_GB",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Caravan & Motorhome Servicing in North Yorkshire | Caravan Support",
+    description:
+      "AWS Approved servicing, repairs and upgrades — workshop & mobile across North Yorkshire. Rated 4.9/5 on Google.",
+  },
+};
+
+const businessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "@id": `${site.domain}/#business`,
+  name: site.legalName,
+  alternateName: site.name,
+  description:
+    "AWS Approved, NCC qualified caravan and motorhome servicing, repairs and upgrades. Workshop in Malton plus fully mobile coverage across North Yorkshire.",
+  url: site.domain,
+  telephone: "+441653513019",
+  email: site.email,
+  priceRange: "££",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: site.address.street,
+    addressLocality: site.address.town,
+    addressRegion: site.address.county,
+    postalCode: site.address.postcode,
+    addressCountry: "GB",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "17:30",
+    },
+  ],
+  areaServed: [
+    "Malton",
+    "York",
+    "Pickering",
+    "Helmsley",
+    "Scarborough",
+    "Driffield",
+    "Ryedale",
+    "North Yorkshire",
+  ].map((name) => ({ "@type": "Place", name })),
+  founder: { "@type": "Person", name: "Harvey Dukesell" },
+  foundingDate: "2023",
+  sameAs: [site.facebook],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Caravan & Motorhome Services",
+    itemListElement: services.map((service) => ({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: service.title,
+        description: service.description,
+      },
+      ...(service.price.startsWith("£")
+        ? { price: service.price.replace("£", ""), priceCurrency: "GBP" }
+        : {}),
+    })),
+  },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(businessJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <Hero />
+      <Services />
+      <Warranty />
+      <DampCallout />
+      <Coverage />
+      <About />
+      <Reviews />
+      <Faq />
+      <BookingCta />
+    </main>
   );
 }
