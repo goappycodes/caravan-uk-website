@@ -5,7 +5,7 @@ import { ButtonLink, Container } from "@/components/ui";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-ink-950">
+    <section className="relative bg-ink-950">
       {/* Background treatment */}
       <div
         aria-hidden
@@ -133,7 +133,7 @@ export function Hero() {
         </div>
 
         {/* Stats band */}
-        <div className="relative -mb-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 shadow-xl shadow-ink-950/10 lg:grid-cols-4">
+        <div className="relative z-10 -mb-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 shadow-xl shadow-ink-950/10 lg:grid-cols-4">
           {[
             {
               icon: Star,
