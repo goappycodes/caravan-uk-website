@@ -52,6 +52,8 @@ export default function AboutPage() {
         title="A local team that treats your van like their own"
         lede="Founded in Malton by Harvey Dukesell, Caravan Support has become one of North Yorkshire's best-reviewed caravan and motorhome specialists — trusted by private owners and holiday parks alike."
         crumbs={[{ label: "About" }]}
+        image="/images/engineer.jpg"
+        imageAlt="Engineer working in the workshop"
       />
 
       {/* Story */}

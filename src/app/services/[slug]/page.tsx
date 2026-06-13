@@ -8,6 +8,7 @@ import { ButtonLink, Container, Eyebrow } from "@/components/ui";
 import { DataIcon } from "@/components/icons";
 import { PageHeader } from "@/components/PageHeader";
 import { CtaBand } from "@/components/CtaBand";
+import { ServiceCard } from "@/components/Services";
 
 type Params = { slug: string };
 
@@ -81,6 +82,8 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
         title={service.title}
         lede={service.description}
         crumbs={[{ label: "Services", href: "/services" }, { label: service.shortTitle }]}
+        image={service.image}
+        imageAlt={service.imageAlt}
       >
         <div className="mt-7 flex flex-wrap items-center gap-4">
           <ButtonLink href="/contact">Book this service</ButtonLink>
@@ -187,20 +190,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
           </div>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {otherServices.map((other) => (
-              <Link
-                key={other.slug}
-                href={`/services/${other.slug}`}
-                className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg"
-              >
-                <span className="mb-4 flex size-10 items-center justify-center rounded-lg bg-accent-500/12 text-accent-600 transition-colors group-hover:bg-accent-500 group-hover:text-ink-950">
-                  <DataIcon name={other.icon} className="size-5" />
-                </span>
-                <h3 className="font-display text-base font-bold text-ink-900">
-                  {other.shortTitle}
-                </h3>
-                <p className="mt-1.5 line-clamp-2 text-sm text-slate-600">{other.description}</p>
-                <span className="mt-4 text-sm font-bold text-ink-800">{other.price}</span>
-              </Link>
+              <ServiceCard key={other.slug} service={other} />
             ))}
           </div>
         </Container>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { moreServices, services } from "@/lib/site";
@@ -10,43 +11,55 @@ export function ServiceCard({
   service: (typeof services)[number];
 }) {
   return (
-    <article className="group relative flex flex-col rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-ink-100 hover:shadow-xl hover:shadow-ink-900/8">
-      <span className="mb-5 flex size-12 items-center justify-center rounded-xl bg-accent-500/12 text-accent-600 transition-colors duration-300 group-hover:bg-accent-500 group-hover:text-ink-950">
-        <DataIcon name={service.icon} className="size-6" />
-      </span>
+    <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-ink-100 hover:shadow-xl hover:shadow-ink-900/10">
+      {/* Image header */}
+      <div className="relative aspect-[16/10] overflow-hidden">
+        <Image
+          src={service.image}
+          alt={service.imageAlt}
+          fill
+          sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-t from-ink-950/55 via-ink-950/5 to-transparent"
+        />
+        <span className="absolute left-4 top-4 flex size-11 items-center justify-center rounded-xl bg-white/95 text-accent-600 shadow-md backdrop-blur-sm">
+          <DataIcon name={service.icon} className="size-6" />
+        </span>
+        <span className="absolute bottom-3 right-4 rounded-full bg-accent-500 px-3 py-1 text-sm font-extrabold text-ink-950 shadow-md">
+          {service.price}
+        </span>
+      </div>
 
-      <h3 className="font-display text-xl font-bold tracking-tight text-ink-900">
-        <Link href={`/services/${service.slug}`} className="after:absolute after:inset-0">
-          {service.title}
-        </Link>
-      </h3>
-      <p className="mt-2.5 text-sm leading-relaxed text-slate-600">{service.description}</p>
+      {/* Body */}
+      <div className="flex flex-1 flex-col p-6">
+        <h3 className="font-display text-lg font-bold tracking-tight text-ink-900">
+          <Link href={`/services/${service.slug}`} className="after:absolute after:inset-0">
+            {service.title}
+          </Link>
+        </h3>
+        <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-slate-600">
+          {service.description}
+        </p>
 
-      <ul className="mt-5 space-y-2">
-        {service.features.map((feature) => (
-          <li key={feature} className="flex items-start gap-2 text-sm text-slate-700">
-            <Check className="mt-0.5 size-4 shrink-0 text-accent-600" aria-hidden />
-            {feature}
-          </li>
-        ))}
-      </ul>
+        <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-1.5">
+          {service.features.map((feature) => (
+            <li key={feature} className="flex items-center gap-1.5 text-xs font-medium text-slate-700">
+              <Check className="size-3.5 shrink-0 text-accent-600" aria-hidden />
+              {feature}
+            </li>
+          ))}
+        </ul>
 
-      <div className="mt-6 flex items-end justify-between gap-3 border-t border-slate-100 pt-5">
-        <div>
-          <p className="font-display text-lg font-extrabold tracking-tight text-ink-900">
-            {service.price}
-          </p>
-          {service.priceNote ? (
-            <p className="mt-0.5 text-xs text-slate-500">{service.priceNote}</p>
-          ) : null}
-        </div>
-        <span className="flex items-center gap-1 text-sm font-semibold text-ink-700 transition-colors group-hover:text-accent-600">
-          Details
+        <div className="mt-5 flex items-center gap-1 border-t border-slate-100 pt-4 text-sm font-semibold text-ink-700 transition-colors group-hover:text-accent-600">
+          View details
           <ArrowRight
             className="size-4 transition-transform duration-200 group-hover:translate-x-0.5"
             aria-hidden
           />
-        </span>
+        </div>
       </div>
     </article>
   );

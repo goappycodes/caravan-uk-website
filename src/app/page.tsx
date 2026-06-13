@@ -4,6 +4,7 @@ import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
 import { Warranty } from "@/components/Warranty";
 import { DampCallout } from "@/components/DampCallout";
+import { LifestyleStrip } from "@/components/LifestyleStrip";
 import { Coverage } from "@/components/Coverage";
 import { About } from "@/components/About";
 import { Reviews } from "@/components/Reviews";
@@ -115,6 +116,7 @@ export default function HomePage() {
       <Services />
       <Warranty />
       <DampCallout />
+      <LifestyleStrip />
       <Coverage />
       <About />
       <Reviews />

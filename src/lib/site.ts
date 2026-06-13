@@ -158,8 +158,8 @@ export const services: Service[] = [
       "From electrical faults, gas issues and plumbing to roof and window resealing, tyres and suspension — fixed properly, first time.",
     price: "Quoted up front",
     icon: "flame",
-    image: "/images/engineer.jpg",
-    imageAlt: "Engineer inspecting the underside of a vehicle in a workshop",
+    image: "/images/mechanic.jpg",
+    imageAlt: "Engineer's gloved hands working on mechanical components in the workshop",
     features: ["Fault-finding & diagnostics", "Quality parts", "Workshop & mobile"],
     intro: [
       "When something stops working in your caravan or motorhome — a heater that won't fire, lights that flicker, a pump that runs dry, a leak you can't trace — you want it diagnosed properly, not guessed at. We fault-find methodically, explain what we've found, and quote before we fix.",
@@ -218,8 +218,8 @@ export const services: Service[] = [
     price: "Solar from £409",
     priceNote: "GasLow from £899.99",
     icon: "sun",
-    image: "/images/interior.jpg",
-    imageAlt: "Bright, modern campervan interior with seating and kitchen area",
+    image: "/images/solar.jpg",
+    imageAlt: "Solar panels against a clear blue sky",
     features: ["Supply & fit packages", "Up to 10-year warranties", "Demonstration included"],
     intro: [
       "The right upgrades transform how — and where — you can use your caravan or motorhome. Solar keeps your batteries topped up off-grid, a proper 4G/5G system gives you reliable internet on any pitch, and refillable GasLow cylinders end the bottle-swap routine for good.",

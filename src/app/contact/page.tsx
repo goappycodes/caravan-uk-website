@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { CalendarCheck, Clock, Mail, MapPin, MessageSquareText, Phone } from "lucide-react";
 import { site } from "@/lib/site";
 import { Container } from "@/components/ui";
@@ -47,6 +48,8 @@ export default function ContactPage() {
         title="Let's get your van booked in"
         lede="Get a free quote in under a minute, or talk to us directly — we're a friendly bunch and happy to advise, even if you just have a question."
         crumbs={[{ label: "Contact" }]}
+        image="/images/hero-caravan.jpg"
+        imageAlt="Touring caravan outside the workshop"
       />
 
       <section className="bg-sand-50 py-16 sm:py-20">
@@ -54,6 +57,23 @@ export default function ContactPage() {
           <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
             {/* Contact details */}
             <div>
+              <div className="relative mb-4 hidden aspect-[16/7] overflow-hidden rounded-2xl shadow-md sm:block">
+                <Image
+                  src="/images/interior-cosy.jpg"
+                  alt="Warm, welcoming caravan interior"
+                  fill
+                  sizes="(min-width: 1024px) 45vw, 100vw"
+                  className="object-cover"
+                />
+                <div
+                  aria-hidden
+                  className="absolute inset-0 bg-gradient-to-t from-ink-950/55 to-transparent"
+                />
+                <p className="absolute bottom-4 left-5 max-w-xs font-display text-lg font-bold text-white">
+                  Friendly, local and happy to help.
+                </p>
+              </div>
+
               <div className="grid gap-4 sm:grid-cols-2">
                 <a
                   href={site.phoneHref}

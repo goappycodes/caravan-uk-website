@@ -30,6 +30,8 @@ export default function PricingPage() {
         title="Honest prices, published up front"
         lede="Most servicers make you phone around for a price. Ours are right here — and repairs or damp work are always quoted in writing before anything starts."
         crumbs={[{ label: "Pricing" }]}
+        image="/images/tools.jpg"
+        imageAlt="Workshop tool wall"
       />
 
       <section className="bg-sand-50 py-16 sm:py-20">

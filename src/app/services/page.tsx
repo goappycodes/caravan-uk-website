@@ -31,6 +31,8 @@ export default function ServicesPage() {
         title="Every job your van needs, done properly"
         lede="From the annual service that keeps your warranty alive to repairs, refits and upgrades — all with honest pricing, at our Malton workshop or mobile across North Yorkshire."
         crumbs={[{ label: "Services" }]}
+        image="/images/caravan-side.jpg"
+        imageAlt="Side profile of a touring caravan"
       />
 
       <section className="bg-sand-50 py-16 sm:py-20">
