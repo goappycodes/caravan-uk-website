@@ -23,19 +23,15 @@ const steps = [
 
 export function BookingCta() {
   return (
-    <section id="book" className="scroll-mt-24 relative overflow-hidden bg-ink-950 py-20 sm:py-28">
-      <div
-        aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_30%_0%,rgba(216,19,36,0.16),transparent),radial-gradient(ellipse_50%_40%_at_90%_100%,rgba(255,255,255,0.05),transparent)]"
-      />
+    <section id="book" className="scroll-mt-24 relative overflow-hidden bg-sand-50 py-20 sm:py-28">
       <Container className="relative">
         <div className="grid gap-14 lg:grid-cols-[1fr_1fr] lg:gap-16">
           <div>
-            <Eyebrow tone="light">Book your service</Eyebrow>
-            <h2 className="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            <Eyebrow>Book your service</Eyebrow>
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
               Spring slots fill fast — get yours booked
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-ink-100/75 sm:text-lg">
+            <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
               Tell us what you need and we’ll come back with an honest price and the next
               available dates. Prefer to talk it through? We’d love to hear from you.
             </p>
@@ -43,12 +39,12 @@ export function BookingCta() {
             <ol className="mt-10 space-y-6">
               {steps.map((step) => (
                 <li key={step.title} className="flex gap-4">
-                  <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-accent-400">
+                  <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-white text-accent-600 shadow-sm ring-1 ring-slate-200">
                     <step.icon className="size-5" aria-hidden />
                   </span>
                   <div>
-                    <h3 className="font-semibold text-white">{step.title}</h3>
-                    <p className="mt-1 text-sm leading-relaxed text-ink-100/65">
+                    <h3 className="font-semibold text-ink-900">{step.title}</h3>
+                    <p className="mt-1 text-sm leading-relaxed text-slate-600">
                       {step.description}
                     </p>
                   </div>
@@ -56,35 +52,35 @@ export function BookingCta() {
               ))}
             </ol>
 
-            <div className="mt-10 grid gap-4 border-t border-white/10 pt-8 sm:grid-cols-2">
+            <div className="mt-10 grid gap-4 border-t border-slate-200 pt-8 sm:grid-cols-2">
               <a
                 href={site.phoneHref}
-                className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 transition-colors hover:border-accent-500/50 hover:bg-white/10"
+                className="group flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-5 py-4 transition-colors hover:border-accent-500/50 hover:shadow-md"
               >
                 <span className="flex size-10 items-center justify-center rounded-full bg-accent-500 text-white">
                   <Phone className="size-4" aria-hidden />
                 </span>
                 <span>
-                  <span className="block text-xs text-ink-100/60">{site.hoursShort}</span>
-                  <span className="block font-semibold text-white">{site.phone}</span>
+                  <span className="block text-xs text-slate-500">{site.hoursShort}</span>
+                  <span className="block font-semibold text-ink-900">{site.phone}</span>
                 </span>
               </a>
               <a
                 href={`mailto:${site.email}`}
-                className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 transition-colors hover:border-accent-500/50 hover:bg-white/10"
+                className="group flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-5 py-4 transition-colors hover:border-accent-500/50 hover:shadow-md"
               >
-                <span className="flex size-10 items-center justify-center rounded-full bg-white/10 text-white">
+                <span className="flex size-10 items-center justify-center rounded-full bg-ink-900 text-white">
                   <Mail className="size-4" aria-hidden />
                 </span>
                 <span>
-                  <span className="block text-xs text-ink-100/60">Email us</span>
-                  <span className="block font-semibold text-white">{site.email}</span>
+                  <span className="block text-xs text-slate-500">Email us</span>
+                  <span className="block font-semibold text-ink-900">{site.email}</span>
                 </span>
               </a>
             </div>
 
-            <p className="mt-6 flex items-start gap-2 text-sm text-ink-100/60">
-              <MapPin className="mt-0.5 size-4 shrink-0 text-accent-400" aria-hidden />
+            <p className="mt-6 flex items-start gap-2 text-sm text-slate-500">
+              <MapPin className="mt-0.5 size-4 shrink-0 text-accent-600" aria-hidden />
               {site.address.street}, {site.address.town}, {site.address.county}{" "}
               {site.address.postcode}
             </p>

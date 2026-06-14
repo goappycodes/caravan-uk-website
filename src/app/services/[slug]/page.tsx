@@ -86,10 +86,10 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
       >
         <div className="mt-7 flex flex-wrap items-center gap-4">
           <ButtonLink href="/contact">Book this service</ButtonLink>
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-sm font-bold text-white">
+          <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-bold text-ink-900">
             {service.price}
             {service.priceNote ? (
-              <span className="font-medium text-ink-100/60">· {service.priceNote}</span>
+              <span className="font-medium text-slate-500">· {service.priceNote}</span>
             ) : null}
           </span>
         </div>

@@ -4,7 +4,7 @@ import { Container, Eyebrow } from "@/components/ui";
 
 export function Faq() {
   return (
-    <section id="faqs" className="scroll-mt-24 bg-sand-50 py-20 sm:py-28">
+    <section id="faqs" className="scroll-mt-24 bg-white py-20 sm:py-28">
       <Container>
         <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           {/* Left: heading + image + call card */}

@@ -116,11 +116,11 @@ export default function AboutPage() {
       </section>
 
       {/* Standards */}
-      <section className="bg-ink-950 py-16 sm:py-24">
+      <section className="bg-sand-50 py-16 sm:py-24">
         <Container>
           <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
             <div className="relative order-2 lg:order-1">
-              <div className="relative aspect-[3/4] max-h-[480px] w-full overflow-hidden rounded-3xl shadow-2xl">
+              <div className="relative aspect-[3/4] max-h-[480px] w-full overflow-hidden rounded-3xl border border-slate-200 shadow-lg">
                 <img
                   src="/images/engineer.jpg"
                   alt="Engineer carefully inspecting the underside of a vehicle"
@@ -130,21 +130,21 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <Eyebrow tone="light">How we work</Eyebrow>
-              <h2 className="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+              <Eyebrow>How we work</Eyebrow>
+              <h2 className="font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
                 Dealer-standard work, without the dealer experience
               </h2>
               <ul className="mt-9 space-y-7">
                 {standards.map((standard) => (
                   <li key={standard.title} className="flex gap-5">
-                    <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-accent-500/15 text-accent-400">
+                    <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-accent-500/10 text-accent-600">
                       <standard.icon className="size-6" aria-hidden />
                     </span>
                     <div>
-                      <h3 className="font-display text-lg font-bold text-white">
+                      <h3 className="font-display text-lg font-bold text-ink-900">
                         {standard.title}
                       </h3>
-                      <p className="mt-1.5 text-sm leading-relaxed text-ink-100/70">
+                      <p className="mt-1.5 text-sm leading-relaxed text-slate-600">
                         {standard.description}
                       </p>
                     </div>

@@ -5,7 +5,7 @@ import { ButtonLink, Container, Eyebrow } from "@/components/ui";
 
 export function About() {
   return (
-    <section id="about" className="scroll-mt-24 bg-sand-50 py-20 sm:py-28">
+    <section id="about" className="scroll-mt-24 bg-white py-20 sm:py-28">
       <Container>
         <div className="grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           {/* Visual panel */}

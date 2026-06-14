@@ -4,7 +4,7 @@ import { Container, Eyebrow } from "@/components/ui";
 
 export function Reviews() {
   return (
-    <section id="reviews" className="scroll-mt-24 bg-white py-20 sm:py-28">
+    <section id="reviews" className="scroll-mt-24 bg-sand-50 py-20 sm:py-28">
       <Container>
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           {/* Left: image + rating */}
@@ -49,7 +49,7 @@ export function Reviews() {
               {reviews.map((review) => (
                 <figure
                   key={review.quote}
-                  className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-sand-50 p-6 transition-shadow hover:shadow-md"
+                  className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 transition-shadow hover:shadow-md"
                 >
                   <div>
                     <div className="flex items-center justify-between">

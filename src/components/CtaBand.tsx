@@ -10,28 +10,28 @@ export function CtaBand({
   lede?: string;
 }) {
   return (
-    <section className="bg-ink-950 py-16 sm:py-20">
+    <section className="bg-white py-16 sm:py-20">
       <Container>
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-ink-800 to-ink-900 px-7 py-12 text-center shadow-2xl sm:px-12">
+        <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-sand-50 px-7 py-12 text-center shadow-sm sm:px-12">
           <div
             aria-hidden
-            className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_-20%,rgba(216,19,36,0.16),transparent)]"
+            className="absolute inset-x-0 top-0 h-1.5 bg-accent-500"
           />
           <div className="relative mx-auto max-w-2xl">
-            <h2 className="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
               {title}
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-ink-100/75 sm:text-lg">{lede}</p>
+            <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">{lede}</p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <ButtonLink href="/contact" size="lg">
                 Get a free quote
               </ButtonLink>
-              <ButtonLink href={site.phoneHref} variant="outline" size="lg">
+              <ButtonLink href={site.phoneHref} variant="ghost" size="lg">
                 <Phone className="size-4" aria-hidden />
                 {site.phone}
               </ButtonLink>
             </div>
-            <p className="mt-6 text-sm text-ink-100/55">
+            <p className="mt-6 text-sm text-slate-500">
               {site.hoursShort} · Workshop &amp; mobile across North Yorkshire
             </p>
           </div>

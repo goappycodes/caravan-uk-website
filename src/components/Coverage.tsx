@@ -4,7 +4,7 @@ import { Container, SectionHeading } from "@/components/ui";
 
 export function Coverage() {
   return (
-    <section id="coverage" className="scroll-mt-24 bg-sand-50 py-20 sm:py-28">
+    <section id="coverage" className="scroll-mt-24 bg-white py-20 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="Workshop & mobile"
@@ -53,7 +53,7 @@ export function Coverage() {
           </div>
 
           {/* Mobile card */}
-          <div className="flex flex-col overflow-hidden rounded-3xl bg-ink-900 text-white">
+          <div className="flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white">
             <div className="relative h-52 sm:h-60">
               <img
                 src="/images/caravan-park.jpg"
@@ -67,10 +67,10 @@ export function Coverage() {
               </span>
             </div>
             <div className="flex flex-1 flex-col p-8 sm:p-9">
-              <h3 className="font-display text-2xl font-extrabold tracking-tight">
+              <h3 className="font-display text-2xl font-extrabold tracking-tight text-ink-900">
                 Mobile, wherever your van lives
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-ink-100/75 sm:text-base">
+              <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
                 No towing, no time off work. We service and repair caravans and motorhomes at
                 home, on storage sites and on seasonal pitches — and we’re the trusted servicing
                 team for holiday parks across Ryedale.
@@ -79,7 +79,7 @@ export function Coverage() {
                 {coverageTowns.map((town) => (
                   <li
                     key={town}
-                    className="rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-xs font-medium text-ink-100/90"
+                    className="rounded-full border border-slate-200 bg-sand-50 px-3.5 py-1.5 text-xs font-medium text-slate-700"
                   >
                     {town}
                   </li>
@@ -88,11 +88,11 @@ export function Coverage() {
                   + all of North Yorkshire
                 </li>
               </ul>
-              <p className="mt-6 text-sm text-ink-100/60">
+              <p className="mt-6 text-sm text-slate-500">
                 Not sure if we reach you?{" "}
                 <a
                   href={site.phoneHref}
-                  className="font-semibold text-accent-400 underline-offset-2 hover:underline"
+                  className="font-semibold text-accent-600 underline-offset-2 hover:underline"
                 >
                   Call {site.phone}
                 </a>{" "}

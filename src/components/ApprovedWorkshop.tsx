@@ -32,16 +32,16 @@ export function ApprovedWorkshop() {
   return (
     <section
       id="approved-workshop"
-      className="scroll-mt-24 overflow-hidden bg-ink-950 py-20 sm:py-28"
+      className="scroll-mt-24 overflow-hidden bg-sand-50 py-20 sm:py-28"
     >
       <Container>
         <div className="grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
           <div>
-            <Eyebrow tone="light">The Approved Workshop difference</Eyebrow>
-            <h2 className="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            <Eyebrow>The Approved Workshop difference</Eyebrow>
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
               What &ldquo;Approved Workshop&rdquo; really means for you
             </h2>
-            <p className="mt-5 text-base leading-relaxed text-ink-100/80 sm:text-lg">
+            <p className="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">
               Anyone can call themselves a caravan engineer. An Approved Workshop has earned the
               accreditation — and is re-checked for it every year. For you, that&rsquo;s real
               peace of mind: the work is done to a recognised national standard, and your
@@ -51,12 +51,12 @@ export function ApprovedWorkshop() {
             <ul className="mt-10 space-y-7">
               {proofs.map((proof) => (
                 <li key={proof.title} className="flex gap-5">
-                  <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-accent-500/15 text-accent-400">
+                  <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-accent-500/10 text-accent-600">
                     <proof.icon className="size-6" aria-hidden />
                   </span>
                   <div>
-                    <h3 className="font-display text-lg font-bold text-white">{proof.title}</h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-ink-100/70">
+                    <h3 className="font-display text-lg font-bold text-ink-900">{proof.title}</h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-slate-600">
                       {proof.description}
                     </p>
                   </div>
@@ -69,9 +69,9 @@ export function ApprovedWorkshop() {
           <div className="relative mx-auto w-full max-w-md">
             <div
               aria-hidden
-              className="absolute -inset-6 rounded-[2rem] bg-[radial-gradient(ellipse_at_top_left,rgba(216,19,36,0.2),transparent_60%)]"
+              className="absolute -inset-6 rounded-[2rem] bg-[radial-gradient(ellipse_at_top_left,rgba(216,19,36,0.12),transparent_60%)]"
             />
-            <div className="relative rotate-1 rounded-2xl bg-white p-7 shadow-2xl shadow-ink-950/50 transition-transform duration-300 hover:rotate-0 sm:p-8">
+            <div className="relative rotate-1 rounded-2xl border border-slate-200 bg-white p-7 shadow-xl shadow-ink-950/10 transition-transform duration-300 hover:rotate-0 sm:p-8">
               <div className="flex items-center justify-between border-b border-slate-100 pb-5">
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.16em] text-slate-400">

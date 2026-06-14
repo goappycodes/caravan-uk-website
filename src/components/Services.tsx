@@ -65,7 +65,7 @@ export function ServiceCard({
 
 export function Services() {
   return (
-    <section id="services" className="scroll-mt-24 bg-white py-20 sm:py-28">
+    <section id="services" className="scroll-mt-24 bg-sand-50 py-20 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="In our workshop"
