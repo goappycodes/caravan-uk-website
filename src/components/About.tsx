@@ -22,7 +22,7 @@ export function About() {
             </div>
             <div className="relative -mt-16 ml-6 mr-0 rounded-3xl bg-ink-900 p-7 text-white shadow-xl shadow-ink-900/25 sm:ml-10 sm:p-8">
               <div className="flex items-center gap-4">
-                <span className="flex size-14 items-center justify-center rounded-2xl bg-accent-500 font-display text-xl font-extrabold text-ink-950">
+                <span className="flex size-14 items-center justify-center rounded-2xl bg-accent-500 font-display text-xl font-extrabold text-white">
                   HD
                 </span>
                 <div>

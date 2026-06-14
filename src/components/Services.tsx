@@ -28,7 +28,7 @@ export function ServiceCard({
         <span className="absolute left-4 top-4 flex size-11 items-center justify-center rounded-xl bg-white/95 text-accent-600 shadow-md backdrop-blur-sm">
           <DataIcon name={service.icon} className="size-6" />
         </span>
-        <span className="absolute bottom-3 right-4 rounded-full bg-accent-500 px-3 py-1 text-sm font-extrabold text-ink-950 shadow-md">
+        <span className="absolute bottom-3 right-4 rounded-full bg-accent-500 px-3 py-1 text-sm font-extrabold text-white shadow-md">
           {service.price}
         </span>
       </div>
@@ -67,12 +67,12 @@ export function ServiceCard({
 
 export function Services() {
   return (
-    <section id="services" className="scroll-mt-24 bg-sand-50 pt-28 pb-20 sm:pt-32 sm:pb-24">
+    <section id="services" className="scroll-mt-24 bg-white py-20 sm:py-28">
       <Container>
         <SectionHeading
-          eyebrow="Our services"
-          title="Everything your caravan or motorhome needs"
-          lede="Honest, up-front pricing on every job — from annual servicing that protects your warranty to repairs, refits and upgrades."
+          eyebrow="In our workshop"
+          title="Whatever your van needs, we'll look after it"
+          lede="Servicing, repairs and upgrades carried out properly — by people who treat your caravan or motorhome like their own. Clear prices, honest advice, no surprises."
         />
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

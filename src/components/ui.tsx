@@ -13,7 +13,7 @@ export function Container({
 
 const buttonVariants = {
   primary:
-    "bg-accent-500 text-ink-950 hover:bg-accent-400 active:bg-accent-600 shadow-lg shadow-accent-500/25 hover:shadow-accent-400/30",
+    "bg-accent-500 text-white hover:bg-accent-600 active:bg-accent-700 shadow-lg shadow-accent-500/25 hover:shadow-accent-600/30",
   dark: "bg-ink-900 text-white hover:bg-ink-800 active:bg-ink-950 shadow-lg shadow-ink-900/20",
   outline:
     "border border-white/25 text-white hover:bg-white/10 active:bg-white/15 backdrop-blur-sm",

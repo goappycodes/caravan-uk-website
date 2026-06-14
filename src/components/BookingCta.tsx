@@ -26,7 +26,7 @@ export function BookingCta() {
     <section id="book" className="scroll-mt-24 relative overflow-hidden bg-ink-950 py-20 sm:py-28">
       <div
         aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_30%_0%,rgba(47,95,150,0.3),transparent),radial-gradient(ellipse_50%_40%_at_90%_100%,rgba(245,158,11,0.1),transparent)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_30%_0%,rgba(41,77,145,0.35),transparent),radial-gradient(ellipse_50%_40%_at_90%_100%,rgba(216,19,36,0.12),transparent)]"
       />
       <Container className="relative">
         <div className="grid gap-14 lg:grid-cols-[1fr_1fr] lg:gap-16">
@@ -61,7 +61,7 @@ export function BookingCta() {
                 href={site.phoneHref}
                 className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 transition-colors hover:border-accent-500/50 hover:bg-white/10"
               >
-                <span className="flex size-10 items-center justify-center rounded-full bg-accent-500 text-ink-950">
+                <span className="flex size-10 items-center justify-center rounded-full bg-accent-500 text-white">
                   <Phone className="size-4" aria-hidden />
                 </span>
                 <span>

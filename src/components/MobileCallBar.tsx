@@ -16,7 +16,7 @@ export function MobileCallBar() {
         </a>
         <Link
           href="/contact"
-          className="flex flex-1 items-center justify-center gap-2 rounded-full bg-accent-500 px-4 py-3 text-sm font-bold text-ink-950 shadow-lg shadow-accent-500/30"
+          className="flex flex-1 items-center justify-center gap-2 rounded-full bg-accent-500 px-4 py-3 text-sm font-bold text-white shadow-lg shadow-accent-500/30"
         >
           <CalendarCheck className="size-4" aria-hidden />
           Book a service

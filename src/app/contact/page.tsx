@@ -79,7 +79,7 @@ export default function ContactPage() {
                   href={site.phoneHref}
                   className="group rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:-translate-y-0.5 hover:shadow-lg"
                 >
-                  <span className="flex size-11 items-center justify-center rounded-full bg-accent-500 text-ink-950">
+                  <span className="flex size-11 items-center justify-center rounded-full bg-accent-500 text-white">
                     <Phone className="size-5" aria-hidden />
                   </span>
                   <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-slate-500">

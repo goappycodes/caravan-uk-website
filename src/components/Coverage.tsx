@@ -5,7 +5,7 @@ import { Container, SectionHeading } from "@/components/ui";
 
 export function Coverage() {
   return (
-    <section id="coverage" className="scroll-mt-24 bg-white py-20 sm:py-28">
+    <section id="coverage" className="scroll-mt-24 bg-sand-50 py-20 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="Workshop & mobile"
@@ -64,7 +64,7 @@ export function Coverage() {
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
               />
-              <span className="absolute left-5 top-5 flex items-center gap-2 rounded-full bg-accent-500 px-4 py-2 text-xs font-bold text-ink-950">
+              <span className="absolute left-5 top-5 flex items-center gap-2 rounded-full bg-accent-500 px-4 py-2 text-xs font-bold text-white">
                 <Truck className="size-4" aria-hidden />
                 We come to you
               </span>
@@ -87,7 +87,7 @@ export function Coverage() {
                     {town}
                   </li>
                 ))}
-                <li className="rounded-full bg-accent-500 px-3.5 py-1.5 text-xs font-bold text-ink-950">
+                <li className="rounded-full bg-accent-500 px-3.5 py-1.5 text-xs font-bold text-white">
                   + all of North Yorkshire
                 </li>
               </ul>

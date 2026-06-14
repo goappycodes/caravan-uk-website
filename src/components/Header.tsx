@@ -43,7 +43,7 @@ export function Header() {
               href={site.phoneHref}
               className="group flex items-center gap-2 text-sm font-semibold text-white"
             >
-              <span className="flex size-9 items-center justify-center rounded-full bg-white/10 transition-colors group-hover:bg-accent-500 group-hover:text-ink-950">
+              <span className="flex size-9 items-center justify-center rounded-full bg-white/10 transition-colors group-hover:bg-accent-500 group-hover:text-white">
                 <Phone className="size-4" aria-hidden />
               </span>
               {site.phone}

@@ -1,42 +1,51 @@
-import { BadgeCheck, BookCheck, CalendarCheck, Check, Droplets, FileText } from "lucide-react";
+import { BadgeCheck, BookCheck, CalendarCheck, Check, Droplets, FileText, ShieldCheck } from "lucide-react";
 import { Container, Eyebrow } from "@/components/ui";
 
 const proofs = [
   {
     icon: BadgeCheck,
-    title: "Approved Workshop standards",
+    title: "Independently inspected",
     description:
-      "AWS Approved, NCC qualified servicing carried out to the manufacturer-standard checklist your warranty terms ask for.",
+      "Approved Workshops are assessed every year against the National Caravan Council's standards — so the work on your van is held to an independent mark, not just our own word for it.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Backed by the manufacturers",
+    description:
+      "The Approved Workshop Scheme is recognised by all the major UK caravan and motorhome makers, and run with the Caravan and Motorhome Club and the Camping and Caravanning Club.",
   },
   {
     icon: BookCheck,
-    title: "Service book stamped",
+    title: "Your warranty stays valid",
     description:
-      "Every service is documented and your service book stamped — the proof you need if you ever make a warranty claim.",
+      "Annual approved servicing, your book stamped and the work documented — exactly what a water-ingress or bodyshell warranty needs to stay alive.",
   },
   {
     icon: FileText,
-    title: "Written report, plain English",
+    title: "Honest, written records",
     description:
-      "A full written report with damp readings explained, so you know exactly what was checked and what we found.",
+      "A full written report with your damp readings explained, so you always know what was checked, what we found, and what (if anything) needs doing.",
   },
 ];
 
-export function Warranty() {
+export function ApprovedWorkshop() {
   return (
-    <section id="warranty" className="scroll-mt-24 overflow-hidden bg-ink-950 py-20 sm:py-28">
+    <section
+      id="approved-workshop"
+      className="scroll-mt-24 overflow-hidden bg-ink-950 py-20 sm:py-28"
+    >
       <Container>
         <div className="grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
           <div>
-            <Eyebrow tone="light">The warranty promise</Eyebrow>
+            <Eyebrow tone="light">The Approved Workshop difference</Eyebrow>
             <h2 className="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-              Skip a proper service, and your warranty can quietly die
+              What &ldquo;Approved Workshop&rdquo; really means for you
             </h2>
             <p className="mt-5 text-base leading-relaxed text-ink-100/80 sm:text-lg">
-              Most UK water-ingress and bodyshell warranties depend on an annual service by an
-              approved workshop — often within a strict window. Miss it, or use the wrong
-              servicer, and a future damp claim can be refused. We make sure that never
-              happens to you.
+              Anyone can call themselves a caravan engineer. An Approved Workshop has earned the
+              accreditation — and is re-checked for it every year. For you, that&rsquo;s real
+              peace of mind: the work is done to a recognised national standard, and your
+              warranty is protected.
             </p>
 
             <ul className="mt-10 space-y-7">
@@ -60,7 +69,7 @@ export function Warranty() {
           <div className="relative mx-auto w-full max-w-md">
             <div
               aria-hidden
-              className="absolute -inset-6 rounded-[2rem] bg-[radial-gradient(ellipse_at_top_left,rgba(245,158,11,0.18),transparent_60%)]"
+              className="absolute -inset-6 rounded-[2rem] bg-[radial-gradient(ellipse_at_top_left,rgba(216,19,36,0.2),transparent_60%)]"
             />
             <div className="relative rotate-1 rounded-2xl bg-white p-7 shadow-2xl shadow-ink-950/50 transition-transform duration-300 hover:rotate-0 sm:p-8">
               <div className="flex items-center justify-between border-b border-slate-100 pb-5">

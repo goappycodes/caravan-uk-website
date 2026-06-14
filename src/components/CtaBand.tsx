@@ -15,7 +15,7 @@ export function CtaBand({
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-ink-800 to-ink-900 px-7 py-12 text-center shadow-2xl sm:px-12">
           <div
             aria-hidden
-            className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_-20%,rgba(245,158,11,0.15),transparent)]"
+            className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_-20%,rgba(216,19,36,0.16),transparent)]"
           />
           <div className="relative mx-auto max-w-2xl">
             <h2 className="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">

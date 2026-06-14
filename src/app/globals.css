@@ -1,27 +1,27 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand palette — deep navy (trust/engineering) */
-  --color-ink-950: #060f1a;
-  --color-ink-900: #0a1a2b;
-  --color-ink-800: #102740;
-  --color-ink-700: #173356;
-  --color-ink-600: #224a77;
-  --color-ink-500: #2f5f96;
-  --color-ink-100: #d9e4f0;
-  --color-ink-50: #eef3f9;
+  /* Brand navy — anchored on the live site's secondary #0B2154 */
+  --color-ink-950: #07142f;
+  --color-ink-900: #0b2154;
+  --color-ink-800: #122a66;
+  --color-ink-700: #1c3a78;
+  --color-ink-600: #294d91;
+  --color-ink-500: #3a61a8;
+  --color-ink-100: #d3ddec;
+  --color-ink-50: #eaf0f7;
 
-  /* Accent — amber (CTAs, highlights) */
-  --color-accent-300: #fcd34d;
-  --color-accent-400: #fbbf24;
-  --color-accent-500: #f59e0b;
-  --color-accent-600: #d97706;
-  --color-accent-700: #b45309;
+  /* Brand red — anchored on the live site's primary/accent #D81324 */
+  --color-accent-300: #f4969d;
+  --color-accent-400: #ec5663;
+  --color-accent-500: #d81324;
+  --color-accent-600: #b30f1e;
+  --color-accent-700: #8c0b17;
 
-  /* Warm neutrals — premium, crafted feel */
-  --color-sand-50: #faf8f4;
-  --color-sand-100: #f4f0e8;
-  --color-sand-200: #e8e1d3;
+  /* Cool neutral backgrounds — live site #E7EBF0 / #F6F6F6 */
+  --color-sand-50: #f5f7fa;
+  --color-sand-100: #e7ecf2;
+  --color-sand-200: #d5dde7;
 
   --color-slate-850: #1b2533;
 
@@ -66,8 +66,8 @@ body {
 }
 
 ::selection {
-  background: var(--color-accent-400);
-  color: var(--color-ink-950);
+  background: var(--color-accent-500);
+  color: #ffffff;
 }
 
 @media (prefers-reduced-motion: reduce) {

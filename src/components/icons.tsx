@@ -46,16 +46,13 @@ export function FacebookIcon({ className }: { className?: string }) {
 export function Logo({ tone = "light" }: { tone?: "light" | "dark" }) {
   return (
     <span className="flex items-center gap-2.5">
-      <span className="flex size-10 items-center justify-center rounded-xl bg-accent-500 text-ink-950 shadow-md shadow-accent-500/30">
+      <span className="flex size-10 items-center justify-center rounded-xl bg-accent-500 text-white shadow-md shadow-accent-500/30">
         <Caravan className="size-6" strokeWidth={2.2} aria-hidden />
       </span>
       <span className="flex flex-col leading-none">
-        <span
-          className={`font-display text-lg font-extrabold tracking-tight ${
-            tone === "light" ? "text-white" : "text-ink-900"
-          }`}
-        >
-          Caravan Support
+        <span className="font-display text-lg font-extrabold tracking-tight">
+          <span className={tone === "light" ? "text-accent-400" : "text-accent-600"}>Caravan</span>{" "}
+          <span className={tone === "light" ? "text-white" : "text-ink-900"}>Support</span>
         </span>
         <span
           className={`mt-1 text-[0.65rem] font-semibold uppercase tracking-[0.22em] ${

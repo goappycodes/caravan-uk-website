@@ -39,7 +39,7 @@ export function PageHeader({
         className={`absolute inset-0 ${
           image
             ? "bg-gradient-to-r from-ink-950 via-ink-950/85 to-ink-950/55"
-            : "bg-[radial-gradient(ellipse_70%_70%_at_75%_-20%,rgba(47,95,150,0.35),transparent),radial-gradient(ellipse_50%_50%_at_5%_120%,rgba(245,158,11,0.1),transparent)]"
+            : "bg-[radial-gradient(ellipse_70%_70%_at_75%_-20%,rgba(41,77,145,0.4),transparent),radial-gradient(ellipse_50%_50%_at_5%_120%,rgba(216,19,36,0.12),transparent)]"
         }`}
       />
       <div

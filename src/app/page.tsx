@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { faqs, services, site } from "@/lib/site";
 import { Hero } from "@/components/Hero";
+import { TrustIntro } from "@/components/TrustIntro";
+import { ApprovedWorkshop } from "@/components/ApprovedWorkshop";
+import { About } from "@/components/About";
 import { Services } from "@/components/Services";
-import { Warranty } from "@/components/Warranty";
+import { Coverage } from "@/components/Coverage";
+import { Reviews } from "@/components/Reviews";
 import { DampCallout } from "@/components/DampCallout";
 import { LifestyleStrip } from "@/components/LifestyleStrip";
-import { Coverage } from "@/components/Coverage";
-import { About } from "@/components/About";
-import { Reviews } from "@/components/Reviews";
 import { Faq } from "@/components/Faq";
 import { BookingCta } from "@/components/BookingCta";
 
@@ -113,13 +114,14 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <Hero />
+      <TrustIntro />
+      <ApprovedWorkshop />
+      <About />
       <Services />
-      <Warranty />
+      <Coverage />
+      <Reviews />
       <DampCallout />
       <LifestyleStrip />
-      <Coverage />
-      <About />
-      <Reviews />
       <Faq />
       <BookingCta />
     </main>

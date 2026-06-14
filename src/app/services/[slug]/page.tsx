@@ -131,7 +131,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
 
             <aside className="lg:sticky lg:top-24">
               <div className="rounded-3xl border border-slate-200 bg-sand-50 p-8">
-                <span className="flex size-12 items-center justify-center rounded-xl bg-accent-500 text-ink-950">
+                <span className="flex size-12 items-center justify-center rounded-xl bg-accent-500 text-white">
                   <DataIcon name={service.icon} className="size-6" />
                 </span>
                 <h2 className="mt-5 font-display text-xl font-extrabold text-ink-900">

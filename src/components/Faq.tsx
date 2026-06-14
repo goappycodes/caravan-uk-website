@@ -29,7 +29,7 @@ export function Faq() {
             </div>
 
             <div className="mt-6 flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5">
-              <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-accent-500 text-ink-950">
+              <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-accent-500 text-white">
                 <Phone className="size-5" aria-hidden />
               </span>
               <div>

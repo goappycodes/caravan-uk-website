@@ -33,7 +33,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Caravan Support on Facebook"
-              className="mt-6 inline-flex size-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-accent-500 hover:text-ink-950"
+              className="mt-6 inline-flex size-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-accent-500 hover:text-white"
             >
               <FacebookIcon className="size-4" />
             </a>

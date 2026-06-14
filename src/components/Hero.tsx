@@ -9,7 +9,7 @@ export function Hero() {
       {/* Background treatment */}
       <div
         aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_70%_-10%,rgba(47,95,150,0.35),transparent),radial-gradient(ellipse_60%_50%_at_10%_110%,rgba(245,158,11,0.12),transparent)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_70%_-10%,rgba(41,77,145,0.4),transparent),radial-gradient(ellipse_60%_50%_at_10%_110%,rgba(216,19,36,0.14),transparent)]"
       />
       <div
         aria-hidden
@@ -27,7 +27,7 @@ export function Hero() {
           <div className="max-w-xl">
             <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold tracking-wide text-ink-100/90 backdrop-blur-sm">
               <MapPin className="size-3.5 text-accent-400" aria-hidden />
-              Approved Workshop servicing · Malton, North Yorkshire
+              Your local Approved Workshop · Malton, North Yorkshire
             </p>
 
             <h1 className="font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[3.4rem]">
