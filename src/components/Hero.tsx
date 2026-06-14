@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { BadgeCheck, MapPin, Phone, Star, Wrench } from "lucide-react";
 import { site } from "@/lib/site";
 import { ButtonLink, Container } from "@/components/ui";
@@ -9,7 +8,7 @@ export function Hero() {
       {/* Background treatment */}
       <div
         aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_70%_-10%,rgba(41,77,145,0.4),transparent),radial-gradient(ellipse_60%_50%_at_10%_110%,rgba(216,19,36,0.14),transparent)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_70%_-10%,rgba(216,19,36,0.18),transparent),radial-gradient(ellipse_60%_50%_at_10%_110%,rgba(255,255,255,0.05),transparent)]"
       />
       <div
         aria-hidden
@@ -88,13 +87,11 @@ export function Hero() {
           {/* Visual column */}
           <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 shadow-2xl shadow-ink-950/60">
-              <Image
+              <img
                 src="/images/hero-caravan.jpg"
                 alt="Modern touring caravan outside the Caravan Support workshop"
-                fill
-                priority
-                sizes="(min-width: 1024px) 45vw, (min-width: 640px) 32rem, 100vw"
-                className="object-cover"
+                loading="eager"
+                className="absolute inset-0 h-full w-full object-cover"
               />
               <div
                 aria-hidden

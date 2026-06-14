@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ExternalLink, Quote, Star } from "lucide-react";
 import { reviews, site } from "@/lib/site";
 import { Container, Eyebrow } from "@/components/ui";
@@ -20,12 +19,11 @@ export function Reviews() {
             </p>
 
             <div className="relative mt-8 aspect-[5/4] overflow-hidden rounded-3xl shadow-lg">
-              <Image
+              <img
                 src="/images/statics-coast.jpg"
                 alt="A coastal holiday park in North Yorkshire at golden hour"
-                fill
-                sizes="(min-width: 1024px) 32vw, 100vw"
-                className="object-cover"
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute bottom-4 left-4 flex items-center gap-3 rounded-2xl bg-white/95 px-5 py-3 shadow-lg backdrop-blur-sm">
                 <span className="font-display text-3xl font-extrabold text-ink-900">

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { moreServices, services } from "@/lib/site";
@@ -14,12 +13,11 @@ export function ServiceCard({
     <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-ink-100 hover:shadow-xl hover:shadow-ink-900/10">
       {/* Image header */}
       <div className="relative aspect-[16/10] overflow-hidden">
-        <Image
+        <img
           src={service.image}
           alt={service.imageAlt}
-          fill
-          sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div
           aria-hidden

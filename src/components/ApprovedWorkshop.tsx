@@ -95,8 +95,8 @@ export function ApprovedWorkshop() {
                   "Ventilation & fire safety verified",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-sm text-slate-700">
-                    <span className="flex size-5 items-center justify-center rounded-full bg-emerald-100">
-                      <Check className="size-3 text-emerald-600" aria-hidden />
+                    <span className="flex size-5 items-center justify-center rounded-full bg-accent-500/12">
+                      <Check className="size-3 text-accent-600" aria-hidden />
                     </span>
                     {item}
                   </li>
@@ -108,7 +108,7 @@ export function ApprovedWorkshop() {
                   <Droplets className="size-5 text-ink-600" aria-hidden />
                   <span className="text-sm font-semibold text-ink-900">Damp survey</span>
                 </div>
-                <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-700">
+                <span className="rounded-full bg-ink-900 px-3 py-1 text-xs font-bold text-white">
                   PASS
                 </span>
               </div>

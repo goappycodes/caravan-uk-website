@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { CalendarCheck, Clock, Mail, MapPin, MessageSquareText, Phone } from "lucide-react";
 import { site } from "@/lib/site";
 import { Container } from "@/components/ui";
@@ -58,12 +57,11 @@ export default function ContactPage() {
             {/* Contact details */}
             <div>
               <div className="relative mb-4 hidden aspect-[16/7] overflow-hidden rounded-2xl shadow-md sm:block">
-                <Image
+                <img
                   src="/images/interior-cosy.jpg"
                   alt="Warm, welcoming caravan interior"
-                  fill
-                  sizes="(min-width: 1024px) 45vw, 100vw"
-                  className="object-cover"
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover"
                 />
                 <div
                   aria-hidden

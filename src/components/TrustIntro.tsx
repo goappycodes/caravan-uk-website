@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { BadgeCheck, HeartHandshake, MessageSquare, ShieldCheck, Star } from "lucide-react";
 import { site } from "@/lib/site";
 import { ButtonLink, Container, Eyebrow } from "@/components/ui";
@@ -34,12 +33,11 @@ export function TrustIntro() {
           {/* Image */}
           <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-xl shadow-ink-900/15">
-              <Image
+              <img
                 src="/images/engineer.jpg"
                 alt="Caravan Support engineer working carefully in the Malton workshop"
-                fill
-                sizes="(min-width: 1024px) 45vw, (min-width: 640px) 32rem, 100vw"
-                className="object-cover"
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover"
               />
               <div
                 aria-hidden

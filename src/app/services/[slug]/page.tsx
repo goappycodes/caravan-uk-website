@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, BadgeCheck, Check, Phone } from "lucide-react";
@@ -101,13 +100,11 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
           <div className="grid items-start gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
             <div>
               <div className="relative aspect-[16/10] overflow-hidden rounded-3xl shadow-lg">
-                <Image
+                <img
                   src={service.image}
                   alt={service.imageAlt}
-                  fill
-                  priority
-                  sizes="(min-width: 1024px) 55vw, 100vw"
-                  className="object-cover"
+                  loading="eager"
+                  className="absolute inset-0 h-full w-full object-cover"
                 />
               </div>
               <div className="mt-8 space-y-4 text-base leading-relaxed text-slate-600">

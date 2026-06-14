@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Quote } from "lucide-react";
 import { valueProps } from "@/lib/site";
 import { DataIcon } from "@/components/icons";
@@ -12,12 +11,11 @@ export function About() {
           {/* Visual panel */}
           <div className="relative mx-auto w-full max-w-md">
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-xl shadow-ink-900/15">
-              <Image
-                src="/images/lifestyle-coast.jpg"
-                alt="Touring caravan parked by the coast at dusk among wildflowers"
-                fill
-                sizes="(min-width: 1024px) 40vw, (min-width: 640px) 28rem, 100vw"
-                className="object-cover"
+              <img
+                src="/images/owner-fixing.jpg"
+                alt="Hands-on maintenance being carried out on a motorhome at its pitch"
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
             <div className="relative -mt-16 ml-6 mr-0 rounded-3xl bg-ink-900 p-7 text-white shadow-xl shadow-ink-900/25 sm:ml-10 sm:p-8">

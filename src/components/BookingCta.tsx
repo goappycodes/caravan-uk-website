@@ -26,7 +26,7 @@ export function BookingCta() {
     <section id="book" className="scroll-mt-24 relative overflow-hidden bg-ink-950 py-20 sm:py-28">
       <div
         aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_30%_0%,rgba(41,77,145,0.35),transparent),radial-gradient(ellipse_50%_40%_at_90%_100%,rgba(216,19,36,0.12),transparent)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_30%_0%,rgba(216,19,36,0.16),transparent),radial-gradient(ellipse_50%_40%_at_90%_100%,rgba(255,255,255,0.05),transparent)]"
       />
       <Container className="relative">
         <div className="grid gap-14 lg:grid-cols-[1fr_1fr] lg:gap-16">

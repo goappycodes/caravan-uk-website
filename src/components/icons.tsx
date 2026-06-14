@@ -42,24 +42,36 @@ export function FacebookIcon({ className }: { className?: string }) {
   );
 }
 
-/** Brand logo lockup — caravan glyph + wordmark. */
+/**
+ * Caravan Support brand emblem — circular mark of three horizontal bands
+ * (top crescent, centre bar, bottom crescent). Uses currentColor so it
+ * inverts: black on light surfaces, white on dark ones.
+ */
+export function Emblem({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 108" fill="currentColor" className={className} aria-hidden>
+      <path d="M23 39 Q50 7 77 39 Q50 25 23 39 Z" />
+      <rect x="21" y="45" width="58" height="18" rx="9" />
+      <path d="M23 69 Q50 101 77 69 Q50 83 23 69 Z" />
+    </svg>
+  );
+}
+
+/** Brand logo lockup — emblem + CARAVAN (red) / SUPPORT wordmark. */
 export function Logo({ tone = "light" }: { tone?: "light" | "dark" }) {
   return (
     <span className="flex items-center gap-2.5">
-      <span className="flex size-10 items-center justify-center rounded-xl bg-accent-500 text-white shadow-md shadow-accent-500/30">
-        <Caravan className="size-6" strokeWidth={2.2} aria-hidden />
-      </span>
+      <Emblem className={`size-9 ${tone === "light" ? "text-white" : "text-ink-900"}`} />
       <span className="flex flex-col leading-none">
-        <span className="font-display text-lg font-extrabold tracking-tight">
-          <span className={tone === "light" ? "text-accent-400" : "text-accent-600"}>Caravan</span>{" "}
-          <span className={tone === "light" ? "text-white" : "text-ink-900"}>Support</span>
+        <span className="font-display text-xl font-extrabold italic tracking-tight text-accent-500">
+          CARAVAN
         </span>
         <span
-          className={`mt-1 text-[0.65rem] font-semibold uppercase tracking-[0.22em] ${
-            tone === "light" ? "text-ink-100/70" : "text-slate-500"
+          className={`mt-0.5 text-[0.7rem] font-bold uppercase tracking-[0.42em] ${
+            tone === "light" ? "text-white" : "text-ink-900"
           }`}
         >
-          Malton · North Yorkshire
+          Support
         </span>
       </span>
     </span>

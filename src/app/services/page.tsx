@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { moreServices, services, site } from "@/lib/site";
@@ -44,12 +43,11 @@ export default function ServicesPage() {
                 className="group grid overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-xl hover:shadow-ink-900/8 lg:grid-cols-[2fr_3fr]"
               >
                 <div className={`relative min-h-56 lg:min-h-72 ${index % 2 === 1 ? "lg:order-2" : ""}`}>
-                  <Image
+                  <img
                     src={service.image}
                     alt={service.imageAlt}
-                    fill
-                    sizes="(min-width: 1024px) 40vw, 100vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   />
                 </div>
                 <div className="flex flex-col p-8 sm:p-10">

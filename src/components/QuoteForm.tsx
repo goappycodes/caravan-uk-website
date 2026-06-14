@@ -26,8 +26,8 @@ export function QuoteForm() {
   if (status === "success") {
     return (
       <div className="flex h-full min-h-96 flex-col items-center justify-center rounded-3xl bg-white p-10 text-center shadow-2xl">
-        <span className="flex size-16 items-center justify-center rounded-full bg-emerald-100">
-          <CheckCircle2 className="size-8 text-emerald-600" aria-hidden />
+        <span className="flex size-16 items-center justify-center rounded-full bg-accent-500/12">
+          <CheckCircle2 className="size-8 text-accent-600" aria-hidden />
         </span>
         <h3 className="mt-6 font-display text-2xl font-extrabold text-ink-900">
           Request received

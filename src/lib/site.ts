@@ -98,8 +98,8 @@ export const services: Service[] = [
       "A full health check on the living area of your motorhome — gas system, 230v & 12v electrics, ventilation, water ingress and safety equipment.",
     price: "£179.99",
     icon: "home",
-    image: "/images/motorhome.jpg",
-    imageAlt: "Motorhome driving through open countryside",
+    image: "/images/motorhome-interior.jpg",
+    imageAlt: "Inside a motorhome — the living area checked on a habitation service",
     features: ["Damp survey included", "Gas & electrical checks", "Documented for warranty"],
     intro: [
       "Your base vehicle has its MOT and service — but the habitation side of a motorhome needs its own annual check. Gas, electrics, water, ventilation and damp all need testing to keep the living area safe, and to keep your converter's warranty intact.",
@@ -189,8 +189,8 @@ export const services: Service[] = [
     price: "from £863",
     priceNote: "supplied & fitted",
     icon: "zap",
-    image: "/images/towing.jpg",
-    imageAlt: "Car towing a touring caravan on a scenic road",
+    image: "/images/caravan-plain.jpg",
+    imageAlt: "A touring caravan parked, ready to be moved onto its pitch",
     features: ["Leading Powrtouch range", "Single & twin axle", "Manufacturer warranty"],
     intro: [
       "A motor mover turns the worst part of caravanning — pushing, shunting and inch-perfect reversing — into a job you do from a remote control. Onto the pitch, off the drive, into the tightest storage spot: one person, no strain.",

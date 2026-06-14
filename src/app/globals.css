@@ -1,29 +1,40 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand navy — anchored on the live site's secondary #0B2154 */
-  --color-ink-950: #07142f;
-  --color-ink-900: #0b2154;
-  --color-ink-800: #122a66;
-  --color-ink-700: #1c3a78;
-  --color-ink-600: #294d91;
-  --color-ink-500: #3a61a8;
-  --color-ink-100: #d3ddec;
-  --color-ink-50: #eaf0f7;
+  /* Brand "ink" — black / charcoal (no blue). Theme is red, black, white. */
+  --color-ink-950: #0a0a0a;
+  --color-ink-900: #161616;
+  --color-ink-800: #222222;
+  --color-ink-700: #2e2e2e;
+  --color-ink-600: #444444;
+  --color-ink-500: #5a5a5a;
+  --color-ink-100: #d8d8d8;
+  --color-ink-50: #f2f2f2;
 
-  /* Brand red — anchored on the live site's primary/accent #D81324 */
+  /* Brand red — anchored on the live site's primary #D81324 */
   --color-accent-300: #f4969d;
   --color-accent-400: #ec5663;
   --color-accent-500: #d81324;
   --color-accent-600: #b30f1e;
   --color-accent-700: #8c0b17;
 
-  /* Cool neutral backgrounds — live site #E7EBF0 / #F6F6F6 */
-  --color-sand-50: #f5f7fa;
-  --color-sand-100: #e7ecf2;
-  --color-sand-200: #d5dde7;
+  /* Neutral backgrounds (warm-neutral grey, no blue) */
+  --color-sand-50: #f7f7f6;
+  --color-sand-100: #eeeeec;
+  --color-sand-200: #e2e2df;
 
-  --color-slate-850: #1b2533;
+  /* Override Tailwind's blue-tinted slate with neutral grey */
+  --color-slate-50: #f8f8f7;
+  --color-slate-100: #f0f0ef;
+  --color-slate-200: #e4e4e2;
+  --color-slate-300: #d0d0cd;
+  --color-slate-400: #9b9b97;
+  --color-slate-500: #71716d;
+  --color-slate-600: #525250;
+  --color-slate-700: #3f3f3d;
+  --color-slate-800: #272726;
+  --color-slate-850: #1d1d1c;
+  --color-slate-900: #1a1a19;
 
   /* Typography */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { Container, Eyebrow } from "@/components/ui";
@@ -25,13 +24,11 @@ export function PageHeader({
   return (
     <section className="relative overflow-hidden bg-ink-950">
       {image ? (
-        <Image
+        <img
           src={image}
           alt={imageAlt}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center opacity-25"
+          loading="eager"
+          className="absolute inset-0 h-full w-full object-cover object-center opacity-25"
         />
       ) : null}
       <div
@@ -39,7 +36,7 @@ export function PageHeader({
         className={`absolute inset-0 ${
           image
             ? "bg-gradient-to-r from-ink-950 via-ink-950/85 to-ink-950/55"
-            : "bg-[radial-gradient(ellipse_70%_70%_at_75%_-20%,rgba(41,77,145,0.4),transparent),radial-gradient(ellipse_50%_50%_at_5%_120%,rgba(216,19,36,0.12),transparent)]"
+            : "bg-[radial-gradient(ellipse_70%_70%_at_75%_-20%,rgba(216,19,36,0.16),transparent),radial-gradient(ellipse_50%_50%_at_5%_120%,rgba(255,255,255,0.05),transparent)]"
         }`}
       />
       <div

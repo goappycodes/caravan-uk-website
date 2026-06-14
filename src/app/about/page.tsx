@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { BadgeCheck, HeartHandshake, MapPin, ShieldCheck, Star, Trees } from "lucide-react";
 import { site, valueProps } from "@/lib/site";
 import { Container, Eyebrow } from "@/components/ui";
@@ -62,13 +61,11 @@ export default function AboutPage() {
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
             <div className="relative">
               <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-xl">
-                <Image
-                  src="/images/lifestyle-coast.jpg"
-                  alt="Touring caravan parked by the coast at dusk among wildflowers"
-                  fill
-                  priority
-                  sizes="(min-width: 1024px) 45vw, 100vw"
-                  className="object-cover"
+                <img
+                  src="/images/owner-fixing.jpg"
+                  alt="Hands-on maintenance being carried out on a motorhome at its pitch"
+                  loading="eager"
+                  className="absolute inset-0 h-full w-full object-cover"
                 />
               </div>
               <div className="absolute -bottom-6 -right-3 flex items-center gap-3 rounded-2xl bg-white p-4 shadow-xl sm:-right-6 sm:p-5">
@@ -124,12 +121,11 @@ export default function AboutPage() {
           <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
             <div className="relative order-2 lg:order-1">
               <div className="relative aspect-[3/4] max-h-[480px] w-full overflow-hidden rounded-3xl shadow-2xl">
-                <Image
+                <img
                   src="/images/engineer.jpg"
                   alt="Engineer carefully inspecting the underside of a vehicle"
-                  fill
-                  sizes="(min-width: 1024px) 40vw, 100vw"
-                  className="object-cover"
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover"
                 />
               </div>
             </div>
@@ -203,12 +199,11 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-xl">
-              <Image
+              <img
                 src="/images/holiday-park.jpg"
                 alt="Aerial view of a UK holiday park with static caravans near the coast"
-                fill
-                sizes="(min-width: 1024px) 45vw, 100vw"
-                className="object-cover"
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
           </div>

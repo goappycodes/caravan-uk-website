@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ChevronDown, Phone } from "lucide-react";
 import { faqs, site } from "@/lib/site";
 import { Container, Eyebrow } from "@/components/ui";
@@ -19,12 +18,11 @@ export function Faq() {
             </p>
 
             <div className="relative mt-8 hidden aspect-[4/3] overflow-hidden rounded-3xl shadow-lg sm:block">
-              <Image
-                src="/images/couple.jpg"
-                alt="A couple relaxing inside their motorhome with a sea view"
-                fill
-                sizes="(min-width: 1024px) 36vw, 100vw"
-                className="object-cover"
+              <img
+                src="/images/open-door.jpg"
+                alt="A caravan with its door open showing the living space inside"
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
 

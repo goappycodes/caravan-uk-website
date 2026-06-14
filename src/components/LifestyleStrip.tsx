@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { CalendarCheck, MapPin, Star } from "lucide-react";
 import { site } from "@/lib/site";
 import { ButtonLink } from "@/components/ui";
@@ -12,12 +11,11 @@ const chips = [
 export function LifestyleStrip() {
   return (
     <section className="relative isolate overflow-hidden">
-      <Image
-        src="/images/family.jpg"
-        alt="A happy family together in front of their motorhome on a sunny day"
-        fill
-        sizes="100vw"
-        className="object-cover object-center"
+      <img
+        src="/images/caravan-awning.jpg"
+        alt="A caravan set up with an awning and seating on a quiet pitch"
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover object-center"
       />
       <div
         aria-hidden

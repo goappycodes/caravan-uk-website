@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Building2, CalendarClock, MapPin, Truck } from "lucide-react";
 import { coverageTowns, site } from "@/lib/site";
 import { Container, SectionHeading } from "@/components/ui";
@@ -17,12 +16,11 @@ export function Coverage() {
           {/* Workshop card */}
           <div className="flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-sand-50">
             <div className="relative h-52 sm:h-60">
-              <Image
-                src="/images/tools.jpg"
-                alt="Organised tool wall in a professional workshop"
-                fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover"
+              <img
+                src="/images/workbench.jpg"
+                alt="A workbench of well-used tools in the Malton workshop"
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover"
               />
               <span className="absolute left-5 top-5 flex items-center gap-2 rounded-full bg-ink-950/85 px-4 py-2 text-xs font-bold text-white backdrop-blur-sm">
                 <Building2 className="size-4 text-accent-400" aria-hidden />
@@ -57,12 +55,11 @@ export function Coverage() {
           {/* Mobile card */}
           <div className="flex flex-col overflow-hidden rounded-3xl bg-ink-900 text-white">
             <div className="relative h-52 sm:h-60">
-              <Image
-                src="/images/yorkshire-road.jpg"
-                alt="Open road winding through the North Yorkshire countryside"
-                fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover"
+              <img
+                src="/images/caravan-park.jpg"
+                alt="Caravans on a North Yorkshire storage site on a misty morning"
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover"
               />
               <span className="absolute left-5 top-5 flex items-center gap-2 rounded-full bg-accent-500 px-4 py-2 text-xs font-bold text-white">
                 <Truck className="size-4" aria-hidden />
