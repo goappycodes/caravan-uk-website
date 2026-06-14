@@ -27,7 +27,7 @@ const promises = [
 
 export function TrustIntro() {
   return (
-    <section className="bg-white pt-28 pb-20 sm:pt-32 sm:pb-24">
+    <section className="bg-white py-20 sm:py-28">
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Image */}

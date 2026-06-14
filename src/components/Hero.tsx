@@ -1,4 +1,4 @@
-import { BadgeCheck, MapPin, Phone, Star, Wrench } from "lucide-react";
+import { BadgeCheck, MapPin, Phone, Star } from "lucide-react";
 import { site } from "@/lib/site";
 import { ButtonLink, Container } from "@/components/ui";
 
@@ -127,44 +127,6 @@ export function Hero() {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Stats band */}
-        <div className="relative z-10 -mb-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 shadow-xl shadow-ink-950/10 lg:grid-cols-4">
-          {[
-            {
-              icon: Star,
-              value: `${site.rating.value}/5`,
-              label: `Rated across ${site.rating.count} Google reviews`,
-            },
-            {
-              icon: BadgeCheck,
-              value: "AWS Approved",
-              label: "Manufacturer-standard servicing",
-            },
-            {
-              icon: Wrench,
-              value: "NCC Qualified",
-              label: "Trained, accredited engineers",
-            },
-            {
-              icon: MapPin,
-              value: "Workshop + mobile",
-              label: "Malton base, North Yorkshire coverage",
-            },
-          ].map((stat) => (
-            <div key={stat.value} className="flex items-center gap-4 bg-white px-6 py-5">
-              <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-ink-50 text-ink-700">
-                <stat.icon className="size-5" aria-hidden />
-              </span>
-              <div>
-                <p className="font-display text-base font-extrabold tracking-tight text-ink-900">
-                  {stat.value}
-                </p>
-                <p className="mt-0.5 text-xs leading-snug text-slate-500">{stat.label}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </Container>
     </section>
